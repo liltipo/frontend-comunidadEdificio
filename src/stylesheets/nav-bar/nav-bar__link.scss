@@ -1,0 +1,35 @@
+.nav-bar__right-links {
+  display: flex; /* Mantiene los enlaces de la derecha alineados horizontalmente */
+  height: 100%; /* Asegura que los enlaces de la derecha ocupen todo el alto del navbar */
+}
+
+.nav-bar__link {
+  display: flex; /* Hacer que los enlaces sean flexibles */
+  align-items: center; /* Centrar el contenido verticalmente */
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 100%; /* Ocupar todo el alto del navbar */
+  box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+}
+
+/* Aplica margen solo a los enlaces de la derecha */
+.nav-bar__right-links .nav-bar__link {
+  margin-right: 15px;
+}
+
+/* Cambiar color en hover */
+.nav-bar__link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Cuando está activo */
+.nav-bar__link--active {
+  background-color: white;
+  color: cornflowerblue;
+  border-radius: 0;
+  height: 100%; /* Asegura que ocupe todo el alto del navbar */
+  box-sizing: border-box; /* Asegura que padding y bordes se consideren en el tamaño */
+}

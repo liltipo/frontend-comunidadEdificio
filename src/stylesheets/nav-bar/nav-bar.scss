@@ -1,0 +1,10 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between; /* Alinea "Inicio" a la izquierda y los demás a la derecha */
+  background-color: cornflowerblue;
+  padding-left: 20px;
+  align-items: center;
+  height: 55px; /* Ajusta la altura del navbar */
+  box-sizing: border-box; /* Asegura que padding y bordes se incluyan en el tamaño del navbar */
+  font-size:x-large
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+
+@import './layout/index.scss';
+@import './nav-bar/index.scss';
+@import './reservas-page/index.scss';
+@import './boletin-page/index.scss';
+@import './ggcc-page/index.scss';
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: 'ADLaM Display', sans-serif;
+}
