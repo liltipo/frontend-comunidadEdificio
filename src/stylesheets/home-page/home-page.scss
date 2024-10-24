@@ -1,0 +1,53 @@
+.home-container {
+  display: flex; /* Usa Flexbox para dividir en dos columnas */
+  justify-content: space-between; /* Espaciado entre los dos lados */
+  padding-top: 0px;
+  margin: 35px;
+}
+
+.home-left, .home-right {
+  width: 50%; /* Cada lado ocupará el 50% del ancho */
+  padding: 30px; /* Añade espacio interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinea el contenido verticalmente al inicio */
+  align-items: center; /* Cambia a center para centrar horizontalmente */
+}
+
+.home-left {
+  align-items: flex-start; /* Asegura que el contenido se alinee al inicio (arriba) */
+}
+
+.home-right {
+  align-items: center; /* Cambiado a center para alinear el contenido horizontalmente */
+  text-align: center; /* Alinea el texto al centro */
+}
+
+.home-left img {
+  padding-bottom: 60px;
+}
+
+.home-right img {
+  padding-top: 60px;
+}
+
+img {
+  max-width: 100%; /* Hace que la imagen se ajuste a su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 0; /* Elimina cualquier margen por defecto */
+}
+
+p {
+  font-size: large;
+  text-align: justify;
+  margin: 0; /* Elimina cualquier margen adicional alrededor del texto */
+  padding: 0; /* Elimina cualquier padding adicional */
+  line-height: 1.8;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center; /* Asegúrate de que el texto está centrado */
+  margin: 0; /* Asegúrate de que no haya margen que afecte la alineación */
+  padding-bottom: 40px; /* Añade espacio debajo del título */
+}
