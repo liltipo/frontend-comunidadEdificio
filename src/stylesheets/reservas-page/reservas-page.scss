@@ -1,0 +1,58 @@
+.reservas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: left;
+    margin: 0;
+  }
+  
+  .reservas-options {
+    display: flex;
+    justify-content: space-between;
+    width: 60%; /* Ajusta este valor según el espacio que desees para las opciones */
+  }
+  
+  .reserva-option {
+    display: flex;
+    flex-direction: column;
+    width: 40%; /* Ajusta el tamaño de cada opción */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden; /* Para que los bordes redondeados apliquen a los fondos */
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+    
+    .icon-container {
+      background-color:#CADBF9; /* Color de fondo para el ícono */
+      padding: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .text-container {
+      background-color: #fff; /* Color de fondo para el texto */
+      padding: 20px;
+      p {
+        margin: 0;
+        font-size: 1.2em;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 100;
+      }
+    }
+}
