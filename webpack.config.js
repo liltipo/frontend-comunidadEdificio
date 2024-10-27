@@ -1,6 +1,6 @@
 /* eslint-disable max-lines-per-function */
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (_, argv) => ({
   entry: './src/index.js',
@@ -25,9 +25,7 @@ module.exports = (_, argv) => ({
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         options: {
-          presets: [
-            '@babel/preset-react'
-          ]
+          presets: ['@babel/preset-react']
         }
       },
       {
@@ -43,6 +41,18 @@ module.exports = (_, argv) => ({
             loader: 'file-loader'
           }
         ]
+      },
+      {
+        test: /\.pdf$/,  // Añadido para manejar archivos PDF
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]', // Mantiene el nombre original del archivo
+              outputPath: 'assets/'  // Coloca el archivo en la carpeta 'assets'
+            }
+          }
+        ]
       }
     ]
   },
@@ -53,4 +63,4 @@ module.exports = (_, argv) => ({
       index: '/'
     }
   }
-})
+});
