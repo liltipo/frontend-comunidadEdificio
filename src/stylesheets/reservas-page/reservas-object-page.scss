@@ -1,0 +1,58 @@
+.reservas-object-container {
+  text-align: center;
+  padding: 40px;
+
+  h1 {
+    margin-bottom: 20px; /* Reduce el espacio entre el título y el contenido */
+    font-size: 2rem; /* Asegura que el tamaño del título sea consistente */
+  }
+
+  .reservas-object-content {
+    display: flex;
+    justify-content: space-between; /* Asegura que la imagen y el calendario estén a ambos lados */
+    align-items: center;
+    gap: 20px; /* Añade espacio entre la imagen y el calendario */
+    padding: 0 10%; /* Añade márgenes a los lados para un diseño más centrado */
+
+    img {
+      width: 60%; /* Ajusta el ancho de la imagen */
+      border-radius: 8px;
+    }
+
+    .calendar-and-buttons {
+      padding-top: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .react-datepicker {
+        transform: scale(1.45); /* Agranda el calendario sin distorsionar el diseño */
+        margin-bottom: 70px; /* Espacio entre el calendario y los botones */
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px; /* Añade espacio entre los botones */
+
+        button {
+          padding: 10px 29px;
+          border-radius: 5px;
+          color: white;
+          font-size: 1rem;
+          flex: 1; /* Los botones se ajustan al espacio disponible */
+          cursor: pointer;
+        }
+
+        .confirm-button {
+          background-color: green;
+        }
+
+        .cancel-button {
+          background-color: red;
+        }
+      }
+    }
+  }
+}

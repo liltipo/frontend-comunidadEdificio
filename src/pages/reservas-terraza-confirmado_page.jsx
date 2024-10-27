@@ -1,6 +1,7 @@
 import React from 'react';
 import terrazaImage from '../assets/terraza.png';
 import { useNavigate } from 'react-router-dom';
+import '../stylesheets/reservas-page/reservas-object-page.scss'; // Reutiliza el mismo archivo de estilos
 
 const ReservasTerrazaConfirmadoPage = () => {
   const navigate = useNavigate();
@@ -10,15 +11,15 @@ const ReservasTerrazaConfirmadoPage = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Reserva Terraza</h2>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
-        <img src={terrazaImage} alt="Quincho" style={{ width: '50%', borderRadius: '8px' }} />
-        <div style={{ textAlign: 'center' }}>
-          <p style={{ fontSize: '24px', fontWeight: 'bold' }}>Tu reserva ha sido exitosa!</p>
-          <div style={{ fontSize: '48px', color: 'black' }}>✔️</div>
-          <button 
-            onClick={handleBackToHome}
+    <div className="reservas-object-container">
+      <h1>RESERVA TERRAZA</h1> {/* Cambié h2 por h1 para consistencia */}
+      <div className="reservas-object-content">
+        <img src={terrazaImage} alt="Terraza" />
+        <div className="calendar-and-buttons">
+          <p style={{ fontSize: '24px', fontWeight: 'bold' }}>¡Tu reserva ha sido exitosa!</p>
+          <div style={{ fontSize: '48px', color: 'black', marginBottom: '20px' }}>✔️</div>
+          {/* Aplica la clase confirm-button para reutilizar estilos */}
+          <button className="confirm-button" onClick={handleBackToHome} 
             style={{
               backgroundColor: '#4a90e2',
               color: 'white',
@@ -27,8 +28,7 @@ const ReservasTerrazaConfirmadoPage = () => {
               marginTop: '20px',
               cursor: 'pointer',
               fontSize: '16px'
-            }}
-          >
+            }}>
             VOLVER AL INICIO
           </button>
         </div>
