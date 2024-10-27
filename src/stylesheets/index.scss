@@ -16,3 +16,27 @@ html, body {
 * {
   font-family: 'ADLaM Display', sans-serif;
 }
+
+
+.react-datepicker__header {
+  position: relative;
+}
+
+.react-datepicker__current-month {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+.react-datepicker__navigation--previous {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+
+.react-datepicker__navigation--next {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
