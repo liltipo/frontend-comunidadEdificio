@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import quinchoImage from '../assets/quincho.png';
@@ -8,6 +8,27 @@ import '../stylesheets/reservas-page/reservas-object-page.scss';
 const ReservasQuinchoPage = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const navigate = useNavigate();
+  const [disabledDates, setDisabledDates] = useState([]);
+
+  useEffect(() => {
+    // Generar fechas aleatorias no disponibles
+    const generateRandomDisabledDates = () => {
+      const dates = [];
+      const today = new Date();
+      const maxDaysInFuture = 30; // Número de días futuros donde se generarán días no disponibles
+      const numberOfDisabledDays = 7; // Número de días no disponibles que queremos
+
+      for (let i = 0; i < numberOfDisabledDays; i++) {
+        const randomDayOffset = Math.floor(Math.random() * maxDaysInFuture) + 1;
+        const randomDate = new Date(today);
+        randomDate.setDate(today.getDate() + randomDayOffset);
+        dates.push(randomDate);
+      }
+      setDisabledDates(dates);
+    };
+
+    generateRandomDisabledDates();
+  }, []);
 
   const handleConfirm = () => {
     navigate('/reservas-quincho-confirmado');
@@ -26,6 +47,8 @@ const ReservasQuinchoPage = () => {
           <DatePicker
             selected={selectedDate}
             onChange={(date) => setSelectedDate(date)}
+            excludeDates={disabledDates} // Días específicos deshabilitados
+            minDate={new Date()} // Deshabilita días anteriores a hoy
             inline
           />
           <div className="button-group">
