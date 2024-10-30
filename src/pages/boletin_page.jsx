@@ -6,7 +6,7 @@ import '../stylesheets/boletin-page/boletin-page.scss';
 export const BoletinPage = () => {
   return (
     <div className="boletin-container">
-      <h1>Boletín</h1>
+      <h1>BOLETÍN</h1>
       <div className="boletin-content">
         <div className="boletin-section gastos">
           <h2>Gastos del día</h2>

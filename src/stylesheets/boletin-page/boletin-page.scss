@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
   
     h1 {
       font-size: 2.5em;
@@ -14,12 +14,11 @@
     .boletin-content {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 70px;
       width: 100%;
-      max-width: 900px;
+      max-width: 1500px;
   
       .boletin-section {
-        background-color: #d4d7f5;
         padding: 15px;
         border-radius: 10px;
         color: #333;
@@ -30,9 +29,9 @@
           margin-bottom: 10px;
         }
   
-        &.gastos { background-color: #b0b3d6; }
-        &.reservas { background-color: #b0b3d6; }
-        &.anuncios { background-color: #b0b3d6; }
+        &.gastos { background-color: #d0d3ff; }
+        &.reservas { background-color: #d0d3ff; }
+        &.anuncios { background-color: #d0d3ff; }
         &.contactos { background-color: #f7c6d2; }
       }
     }
