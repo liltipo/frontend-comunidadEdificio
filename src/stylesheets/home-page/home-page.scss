@@ -1,53 +1,66 @@
 .home-container {
-  display: flex; /* Usa Flexbox para dividir en dos columnas */
-  justify-content: space-between; /* Espaciado entre los dos lados */
-  padding-top: 0px;
-  margin: 35px;
-}
-
-.home-left, .home-right {
-  width: 50%; /* Cada lado ocupará el 50% del ancho */
-  padding: 30px; /* Añade espacio interno */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Alinea el contenido verticalmente al inicio */
-  align-items: center; /* Cambia a center para centrar horizontalmente */
-}
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 0;
 
-.home-left {
-  align-items: flex-start; /* Asegura que el contenido se alinee al inicio (arriba) */
-}
+  .home-header {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Ahora la imagen ocupa más espacio de pantalla */
+    overflow: hidden;
 
-.home-right {
-  align-items: center; /* Cambiado a center para alinear el contenido horizontalmente */
-  text-align: center; /* Alinea el texto al centro */
-}
+    .edificio-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6); /* Oscurece un poco la imagen para resaltar el texto */
+    }
 
-.home-left img {
-  padding-bottom: 60px;
-}
+    .home-title {
+      position: absolute;
+      bottom: 10%; /* Ubica el título más abajo */
+      left: 5%; /* Alinea el título a la izquierda */
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra al texto */
+      
+      h1 {
+        font-size: 2.5rem; /* Asegura que el texto esté en una sola línea */
+        margin: 0;
+        span {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
 
-.home-right img {
-  padding-top: 60px;
-}
+  .home-description {
+    margin: 40px auto;
+    width: 85%; /* Extiende el texto un poco más hacia la derecha */
+    text-align: center;
+    
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 1000px;
+      text-align: justify;
+      color: #8f8f8f; /* Cambia el color del texto */
+    }
+  }
 
-img {
-  max-width: 100%; /* Hace que la imagen se ajuste a su contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  margin: 0; /* Elimina cualquier margen por defecto */
-}
+  .home-carousel {
+    width: 85%;
+    margin-top: 30px;
+    margin-bottom: 50px; /* Añade espacio debajo del carrusel para evitar que se corte */
 
-p {
-  font-size:larger;
-  text-align: justify;
-  margin: 0; /* Elimina cualquier margen adicional alrededor del texto */
-  padding: 0; /* Elimina cualquier padding adicional */
-  line-height: 1.8;
-}
+    .carousel-item {
+      margin-right: 15px; /* Espacio entre las imágenes */
+    }
 
-h1 {
-  font-size: 2.5em;
-  text-align: center; /* Asegúrate de que el texto está centrado */
-  margin: 0; /* Asegúrate de que no haya margen que afecte la alineación */
-  padding-bottom: 40px; /* Añade espacio debajo del título */
+    .carousel .slide img {
+      height: 400px; /* Ajusta el tamaño de las imágenes en el carrusel */
+      object-fit: cover;
+    }
+  }
 }
