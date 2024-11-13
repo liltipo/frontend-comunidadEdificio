@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Modal, Button } from 'react-bootstrap'; 
-import terrazaImage from '../assets/terraza.png';
+import quinchoImage from '../assets/quincho.png';
 import { useNavigate } from 'react-router-dom';
 import '../stylesheets/reservas-page/reservas-object-page.scss';
 
@@ -52,7 +52,7 @@ const ReservasTerrazaPage = () => {
     <div className="reservas-object-container">
       <h1>RESERVA TERRAZA</h1>
       <div className="reservas-object-content">
-        <img src={terrazaImage} alt="Terraza" />
+        <img src={quinchoImage} alt="Quincho" />
         <div className="calendar-and-buttons">
           <DatePicker
             selected={selectedDate}

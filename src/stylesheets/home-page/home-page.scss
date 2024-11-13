@@ -18,7 +18,7 @@
       filter: brightness(0.6); /* Oscurece un poco la imagen para resaltar el texto */
     }
 
-    .home-title {
+    .home-title { 
       position: absolute;
       bottom: 10%; /* Ubica el título más abajo */
       left: 5%; /* Alinea el título a la izquierda */
@@ -46,21 +46,6 @@
       max-width: 1000px;
       text-align: justify;
       color: #8f8f8f; /* Cambia el color del texto */
-    }
-  }
-
-  .home-carousel {
-    width: 85%;
-    margin-top: 30px;
-    margin-bottom: 50px; /* Añade espacio debajo del carrusel para evitar que se corte */
-
-    .carousel-item {
-      margin-right: 15px; /* Espacio entre las imágenes */
-    }
-
-    .carousel .slide img {
-      height: 400px; /* Ajusta el tamaño de las imágenes en el carrusel */
-      object-fit: cover;
     }
   }
 }

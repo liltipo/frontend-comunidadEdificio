@@ -28,29 +28,6 @@ const HomePage = () => {
           También podrás realizar el pago de tus gastos comunes de manera online, sin necesidad de trámites presenciales, y acceder a tu historial de pagos y facturas directamente desde esta plataforma, todo diseñado para tu comodidad y conveniencia.
         </p>
       </div>
-
-      <div className="home-carousel">
-      <Carousel 
-          showThumbs={false} 
-          autoPlay 
-          infiniteLoop={true} /* Asegura que el bucle infinito está activado */
-          centerMode={true} /* Centra el carrusel */
-          centerSlidePercentage={70} /* Muestra el 70% de la imagen activa */
-          interval={3000} /* Controla el intervalo de auto deslizamiento */
-          emulateTouch={true} /* Permite control táctil (swipe en dispositivos móviles) */
-          showStatus={false} /* Oculta el contador de imágenes */
-        >
-          <div className="carousel-item">
-            <img src={columpios} alt="Imagen columpios" />
-          </div>
-          <div className="carousel-item">
-            <img src={quincho} alt="Imagen quincho" />
-          </div>
-          <div className="carousel-item">
-            <img src={terraza} alt="Imagen terraza" />
-          </div>
-        </Carousel>
-      </div>
     </div>
   );
 };

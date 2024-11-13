@@ -56,7 +56,7 @@ export const GGCCPage = () => {
       {/* Botón de Ir a Pagar */}
       <div className="ir-a-pagar">
         <button onClick={handlePagarClick} className="pagar-button">
-          Ir a Pagar
+          IR A PAGAR
         </button>
       </div>
     </div>
