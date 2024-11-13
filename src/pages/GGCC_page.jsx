@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../stylesheets/ggcc-page/ggcc-page.scss';
 
 const GASTOS_MENSUALES = [
@@ -6,7 +7,7 @@ const GASTOS_MENSUALES = [
   { descripcion: "Sueldo del personal", monto: 44000 },
   { descripcion: "Servicio de reciclaje", monto: 1750 },
   { descripcion: "Mantención del ascensor", monto: 30000 },
-  { descripcion: "Mantención áreas comunes", monto:  30000},
+  { descripcion: "Mantención áreas comunes", monto: 30000 },
   { descripcion: "Electricidad", monto: 50000 },
   { descripcion: "Agua", monto: 20000 },
   { descripcion: "Calefacción central", monto: 66000 }
@@ -17,8 +18,16 @@ const CONTACTOS = {
   administrador: { nombre: "José Pérez", telefono: "123-987-654" },
   mantenimiento: { nombre: "Ana López", telefono: "123-456-321" }
 };
+
 export const GGCCPage = () => {
+  const navigate = useNavigate(); // Para redirigir
+
   const totalGastos = GASTOS_MENSUALES.reduce((total, gasto) => total + gasto.monto, 0);
+
+  const handlePagarClick = () => {
+    navigate('/GGCC-pagar'); // Redirige a la página de pago
+  };
+
   return (
     <div className="container">
       <div className="box gastos">
@@ -43,7 +52,15 @@ export const GGCCPage = () => {
           Mantenimiento: {CONTACTOS.mantenimiento.nombre} - {CONTACTOS.mantenimiento.telefono}
         </div>
       </div>
+
+      {/* Botón de Ir a Pagar */}
+      <div className="ir-a-pagar">
+        <button onClick={handlePagarClick} className="pagar-button">
+          Ir a Pagar
+        </button>
+      </div>
     </div>
   );
 };
-export default GGCCPage
+
+export default GGCCPage;

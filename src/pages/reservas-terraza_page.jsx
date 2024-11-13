@@ -4,11 +4,13 @@ import 'react-datepicker/dist/react-datepicker.css';
 import terrazaImage from '../assets/terraza.png';
 import { useNavigate } from 'react-router-dom';
 import '../stylesheets/reservas-page/reservas-object-page.scss';
+import { Modal, Button } from 'react-bootstrap'; // Importación de Modal de Bootstrap
 
 const ReservasTerrazaPage = () => {
   const [selectedDate, setSelectedDate] = useState(null);
-  const navigate = useNavigate();
   const [disabledDates, setDisabledDates] = useState([]);
+  const [showModal, setShowModal] = useState(false); // Estado para mostrar el modal
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Generar fechas aleatorias no disponibles
@@ -31,7 +33,12 @@ const ReservasTerrazaPage = () => {
   }, []);
 
   const handleConfirm = () => {
-    navigate('/reservas-terraza-confirmado');
+    setShowModal(true); // Muestra el modal al hacer clic en Confirmar
+  };
+
+  const handleModalConfirm = () => {
+    setShowModal(false); // Oculta el modal
+    navigate('/reservas-terraza-confirmado'); // Navega a la página de confirmación
   };
 
   const handleCancel = () => {
@@ -61,6 +68,25 @@ const ReservasTerrazaPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal de confirmación */}
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirmar Reserva</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          ¿Está seguro de que desea confirmar su reserva para el {selectedDate ? selectedDate.toLocaleDateString() : 'una fecha seleccionada'}?
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Cancelar
+          </Button>
+          <Button variant="primary" onClick={handleModalConfirm}>
+            Confirmar
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
