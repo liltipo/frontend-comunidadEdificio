@@ -37,7 +37,7 @@ const ReservasTerrazaPage = () => {
 
   const handleModalConfirm = () => {
     setShowModal(false);
-    navigate('/reservas-terraza-confirmado'); // Redirigir después de confirmar en el modal
+    navigate('/reservas-quincho-confirmado'); // Redirigir después de confirmar en el modal
   };
 
   const handleModalCancel = () => {
