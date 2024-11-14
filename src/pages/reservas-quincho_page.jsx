@@ -50,7 +50,7 @@ const ReservasTerrazaPage = () => {
 
   return (
     <div className="reservas-object-container">
-      <h1>RESERVA TERRAZA</h1>
+      <h1>RESERVA QUINCHO</h1>
       <div className="reservas-object-content">
         <img src={quinchoImage} alt="Quincho" />
         <div className="calendar-and-buttons">
